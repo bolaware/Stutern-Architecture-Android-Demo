@@ -12,7 +12,6 @@ import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.bolaware.architectureexample.MainContract
 import com.bolaware.architectureexample.R
 import com.bolaware.architectureexample.data.Movie
 import com.bolaware.architectureexample.viewmodel.MainViewModel
@@ -20,7 +19,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 const val INITIAL_SEARCH_TERM = "Game"
 
-class MainActivity : AppCompatActivity(), MainContract.View {
+class MainActivity : AppCompatActivity() {
 
     val viewModel by lazy {
         ViewModelProvider(this).get(MainViewModel::class.java)
@@ -82,18 +81,6 @@ class MainActivity : AppCompatActivity(), MainContract.View {
 
     private fun initAMovieSearch(){
         viewModel.searchMovies(INITIAL_SEARCH_TERM)
-    }
-
-    override fun showProgressIndicator(show: Boolean) {
-
-    }
-
-    override fun displayMovies(movies: List<Movie>) {
-
-    }
-
-    override fun showToast(message: String) {
-
     }
 }
 
