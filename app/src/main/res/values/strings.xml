@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ArchitectureExample</string>
+    <string name="search_movies_e_g_king_war">Search Movies...</string>
+</resources>
